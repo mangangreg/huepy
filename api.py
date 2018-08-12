@@ -118,7 +118,7 @@ token = sp_access(code, auth['id'], auth['secret'])
 meta =get_currently_playing(token)
 now = Track(meta)
 
-print("You're currently listening to: ",now,'\n')
+print(now,'\n')
 
 genius_url = lycol.genius_query_url(now.artist + '' + now.track)
 lyrics = lycol.pull_genius(genius_url)
